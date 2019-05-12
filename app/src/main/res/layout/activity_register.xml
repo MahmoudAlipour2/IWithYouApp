@@ -1,9 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".register.RegisterActivity">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+tools:context=".register.RegisterActivity">
 
-</android.support.constraint.ConstraintLayout>
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="150dp"
+    android:textSize="40dp"
+    android:text="Register Form"
+    android:textAlignment="center"
+    android:textStyle="bold" />
+
+
+<EditText
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:id="@+id/reg_Email"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    android:hint="Email"
+    android:inputType="textEmailAddress" />
+
+<EditText
+    android:layout_marginRight="20dp"
+    android:layout_marginLeft="20dp"
+    android:id="@+id/reg_Password"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:hint="Password"
+    android:inputType="textPassword" />
+
+<EditText
+    android:layout_marginRight="20dp"
+    android:layout_marginLeft="20dp"
+    android:id="@+id/reg_FirstName"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:hint="FirstName" />
+
+<EditText
+    android:layout_marginRight="20dp"
+    android:layout_marginLeft="20dp"
+    android:id="@+id/reg_LastName"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:hint="LastName" />
+
+<EditText
+    android:layout_marginRight="20dp"
+    android:layout_marginLeft="20dp"
+    android:id="@+id/reg_PhoneNumber"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:hint="PhoneNumber" />
+
+<Button
+    android:id="@+id/register_btn"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginTop="10dp"
+    android:text="register" />
+
+
+</LinearLayout>
+
