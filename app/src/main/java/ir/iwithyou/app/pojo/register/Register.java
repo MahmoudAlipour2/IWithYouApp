@@ -1,5 +1,5 @@
 
-package ir.iwithyou.app;
+package ir.iwithyou.app.pojo.register;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
