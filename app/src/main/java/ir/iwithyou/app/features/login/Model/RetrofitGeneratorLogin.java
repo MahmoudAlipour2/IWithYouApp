@@ -1,11 +1,10 @@
-package ir.iwithyou.app.register.model;
+package ir.iwithyou.app.features.login.Model;
 
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class RetrofitGenerator {
-
+public class RetrofitGeneratorLogin {
 
     public static final String API_BASE_URL = "Http://www.iwithyou.ir/api/MobileAuth/";
     private static OkHttpClient httpClient = new OkHttpClient.Builder().build();

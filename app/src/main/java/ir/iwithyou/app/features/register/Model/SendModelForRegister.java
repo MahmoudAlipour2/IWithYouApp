@@ -1,4 +1,4 @@
-package ir.iwithyou.app.register.model;
+package ir.iwithyou.app.features.register.Model;
 
 public class SendModelForRegister {
 

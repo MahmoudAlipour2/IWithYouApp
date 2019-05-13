@@ -1,21 +1,17 @@
-package ir.iwithyou.app.register;
+package ir.iwithyou.app.features.register.View;
 
-import android.icu.util.ULocale;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import java.io.IOException;
-import java.util.Locale;
-
 import ir.iwithyou.app.R;
+import ir.iwithyou.app.features.register.Model.ClientRegister;
+import ir.iwithyou.app.features.register.Model.RetrofitGeneratorRegister;
+import ir.iwithyou.app.features.register.Model.SendModelForRegister;
 import ir.iwithyou.app.pojo.register.Register;
-import ir.iwithyou.app.register.model.ClientRegister;
-import ir.iwithyou.app.register.model.RetrofitGenerator;
-import ir.iwithyou.app.register.model.SendModelForRegister;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -53,7 +49,7 @@ public class RegisterActivity extends AppCompatActivity {
                         reg_PhoneNumber.getText().toString()
 
                 );
-                ClientRegister client = RetrofitGenerator.createService(ClientRegister.class);
+                ClientRegister client = RetrofitGeneratorRegister.createService(ClientRegister.class);
 
                 final Call<Register> registerCall = client.register(sendModelForRegister);
                 registerCall.enqueue(new Callback<Register>() {
@@ -67,7 +63,7 @@ public class RegisterActivity extends AppCompatActivity {
                         String status = response.body().getStatus().toString();
                         String statusCode = response.body().getStatusCode().toString();
 
-                        Toast.makeText(RegisterActivity.this, statusCode, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(RegisterActivity.this, message, Toast.LENGTH_SHORT).show();
 
                         //TODO: IF statusCode=0 , Active: Intent to Camera activity.
                     }
