@@ -66,6 +66,7 @@ public class RegisterActivity extends AppCompatActivity {
                         Toast.makeText(RegisterActivity.this, message, Toast.LENGTH_SHORT).show();
 
                         //TODO: IF statusCode=0 , Active: Intent to Camera activity.
+                        //TODO: USE FIREBASE, faranesh.com
                     }
 
                     @Override

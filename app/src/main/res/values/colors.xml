@@ -3,4 +3,38 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+
+
+    <color name="bg_Screen1">#d1395c</color>
+    <color name="bg_Screen2">#14a895</color>
+    <color name="bg_Screen3">#3a94f5</color>
+    <color name="bg_Screen4">#a854d4</color>
+
+    <color name="light_Screen1">#d1395c</color>
+    <color name="light_Screen2">#14a895</color>
+    <color name="light_Screen3">#3a94f5</color>
+    <color name="light_Screen4">#a854d4</color>
+
+    <array name="light_active">
+        <item>@color/light_Screen1</item>
+        <item>@color/light_Screen2</item>
+        <item>@color/light_Screen3</item>
+        <item>@color/light_Screen4</item>
+    </array>
+
+
+    <color name="dark_Screen1">#f98da5</color>
+    <color name="dark_Screen2">#8cf9cb</color>
+    <color name="dark_Screen3">#93c6fd</color>
+    <color name="dark_Screen4">#e465fc</color>
+
+
+    <array name="dark_inactive">
+        <item>@color/dark_Screen1</item>
+        <item>@color/dark_Screen2</item>
+        <item>@color/dark_Screen3</item>
+        <item>@color/dark_Screen4</item>
+    </array>
+
+
 </resources>

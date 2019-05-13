@@ -54,6 +54,8 @@ public class LoginActivity extends AppCompatActivity {
 
                         String foo = response.body().getStatus().toString();
                         Toast.makeText(LoginActivity.this, foo, Toast.LENGTH_SHORT).show();
+
+                        //TODO: USE FIREBASE, faranesh.com
                     }
 
                     @Override
