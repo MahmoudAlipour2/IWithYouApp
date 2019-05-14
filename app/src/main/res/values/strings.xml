@@ -1,16 +1,17 @@
 <resources>
-    <string name="app_name">App</string>
-
-    <string name="screen1_Title">صفحه اول</string>
-    <string name="screen1_Des">توضیحات صفحه اول توضیحات صفحه اول توضیحات صفحه اول</string>
-
-    <string name="screen2_Title">صفحه دوم</string>
-    <string name="screen2_Des">توضیحات صفحه دوم توضیحات صفحه دوم توضیحات صفحه دوم</string>
-
-    <string name="screen3_Title">صفحه سوم</string>
-    <string name="screen3_Des">توضیحات صفحه سوم توضیحات صفحه سوم توضیحات صفحه سوم </string>
-
-    <string name="screen4_Title">صفحه چهارم</string>
-    <string name="screen4_Des">توضیحات صفحه چهارم توضیحات صفحه چهارم توضیحات صفحه چهارم</string>
-
+    <string name="app_name">IntroSlider</string>
+    <string name="title_activity_welcome">Home Screen</string>
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
+    <string name="slide_1_title">Hello Food!</string>
+    <string name="slide_1_desc">The easiest way to order food from your favourite restaurant!</string>
+    <string name="slide_2_title">Movie Tickets</string>
+    <string name="slide_2_desc">Book movie tickets for your family and friends!</string>
+    <string name="slide_3_title">Great Discounts</string>
+    <string name="slide_3_desc">Best discounts on every single service we offer!</string>
+    <string name="slide_4_title">World Travel</string>
+    <string name="slide_4_desc">Book tickets of any transportation and travel the world!</string>
+    <string name="play_again_desc">To see the welcome slider again, goto Settings -> apps -> welcome slider -> clear data</string>
+    <string name="play_again">Play Again</string>
 </resources>
