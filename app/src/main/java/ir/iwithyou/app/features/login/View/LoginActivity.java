@@ -1,10 +1,12 @@
 package ir.iwithyou.app.features.login.View;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import ir.iwithyou.app.R;
@@ -27,6 +29,7 @@ public class LoginActivity extends AppCompatActivity {
     EditText log_Password;
     Button login_btn;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,7 +39,8 @@ public class LoginActivity extends AppCompatActivity {
         log_Password = findViewById(R.id.log_Password);
         login_btn = findViewById(R.id.login_btn);
 
-
+        //TODO: Intent to Register Activity
+        //TODO: Link to Forgot Passwordk?
         login_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
