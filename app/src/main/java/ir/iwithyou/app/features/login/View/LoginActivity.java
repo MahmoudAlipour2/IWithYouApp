@@ -28,6 +28,7 @@ public class LoginActivity extends AppCompatActivity {
     EditText log_Email;
     EditText log_Password;
     Button login_btn;
+    TextView tv_RegisterIntent;
 
 
     @Override
@@ -38,6 +39,7 @@ public class LoginActivity extends AppCompatActivity {
         log_Email = findViewById(R.id.log_Email);
         log_Password = findViewById(R.id.log_Password);
         login_btn = findViewById(R.id.login_btn);
+        tv_RegisterIntent = findViewById(R.id.tv_RegisterIntent);
 
         //TODO: Intent to Register Activity
         //TODO: Link to Forgot Passwordk?
@@ -69,6 +71,16 @@ public class LoginActivity extends AppCompatActivity {
                 });
 
 
+            }
+        });
+
+
+
+        tv_RegisterIntent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+                startActivity(intent);
             }
         });
 
