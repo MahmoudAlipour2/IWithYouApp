@@ -7,7 +7,9 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class RetrofitGeneratorRegister {
 
 
-    public static final String API_BASE_URL = "Http://www.iwithyou.ir/api/MobileAuth/";
+    //Http://www.eyewithyou.ir/api/MobileAuth/register
+
+    public static final String API_BASE_URL = "Http://www.eyewithyou.ir/api/MobileAuth/";
     private static OkHttpClient httpClient = new OkHttpClient.Builder().build();
     private static Retrofit.Builder builder = new Retrofit.Builder().baseUrl(API_BASE_URL).addConverterFactory(GsonConverterFactory.create());
 

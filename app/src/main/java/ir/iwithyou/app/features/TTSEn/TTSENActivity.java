@@ -1,5 +1,9 @@
 package ir.iwithyou.app.features.TTSEn;
 
+import android.content.ActivityNotFoundException;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.speech.tts.TextToSpeech;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -16,6 +20,7 @@ import ir.iwithyou.app.R;
 
 public class TTSENActivity extends AppCompatActivity {
 
+    private static final String GOOGLE_TTS_PACKAGE = "com.google.android.tts";
     Button btn_TTSEn;
     SeekBar sb_SpeedTTSEn;
     SeekBar sb_PitchTTSEn;
@@ -40,7 +45,12 @@ public class TTSENActivity extends AppCompatActivity {
             public void onInit(int status) {
                 if (status == TextToSpeech.ERROR) {
                     Log.e(TTS_TAG, "Initialize  failed!");
+                    downloadGoogleTTS();
                 } else {
+                    if (isPackageInstalled(GOOGLE_TTS_PACKAGE)) {
+                        mTTS.setEngineByPackageName(GOOGLE_TTS_PACKAGE);
+                    }
+
                     int result = mTTS.setLanguage(Locale.US);
                     if (result == TextToSpeech.LANG_NOT_SUPPORTED || result == TextToSpeech.LANG_MISSING_DATA) {
                         Log.e(TTS_TAG, "Language not supported");
@@ -56,6 +66,23 @@ public class TTSENActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    private boolean isPackageInstalled(String packageName) {
+        try {
+            getPackageManager().getPackageInfo(packageName, 0);
+        } catch (PackageManager.NameNotFoundException e) {
+            return false;
+        }
+        return true;
+    }
+
+    private void downloadGoogleTTS() {
+        try {
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + GOOGLE_TTS_PACKAGE)));
+        } catch (ActivityNotFoundException ante) {
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + GOOGLE_TTS_PACKAGE)));
+        }
     }
 
     private void speak() {

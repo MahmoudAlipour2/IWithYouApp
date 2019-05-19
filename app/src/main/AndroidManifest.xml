@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="ir.iwithyou.app">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -11,21 +12,26 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".features.TTSEn.TTSENActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <action android:name="android.intent.action.VIEW" />
+        <activity android:name=".features.TTSFa.TTSFaActivity">
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
-        <activity android:name=".features.introSlider.WelcomeActivity"></activity>
+        <activity android:name=".features.TTSEn.TTSENActivity">
+
+        </activity>
+        <activity android:name=".features.introSlider.WelcomeActivity" />
         <activity
             android:name=".features.splash.SplashActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar">
 
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
-        <activity android:name=".features.login.View.LoginActivity" />
+        <activity android:name=".features.login.View.LoginActivity" >
+
+        </activity>
         <activity android:name=".features.register.View.RegisterActivity" />
         <activity android:name=".MainActivity" />
     </application>

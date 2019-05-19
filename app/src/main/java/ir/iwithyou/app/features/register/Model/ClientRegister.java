@@ -10,5 +10,4 @@ public interface ClientRegister {
     @POST("register")
     Call<Register> register(@Body SendModelForRegister sendModelForRegister);
 
-
 }
