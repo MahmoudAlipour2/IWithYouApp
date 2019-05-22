@@ -6,21 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".features.test.TestActivity">
 
-    <Button
-        android:text="Camera"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="14dp"
-        android:id="@+id/button"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+
 
     <ImageView
         android:layout_height="match_parent"
         app:srcCompat="@mipmap/ic_launcher"
-        android:id="@+id/imageView"
-        android:layout_width="fill_parent"
-        android:layout_above="@+id/button"
+        android:id="@+id/img"
+        android:layout_width="match_parent"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginBottom="54dp" />

@@ -43,8 +43,11 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.8.5'
     implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
 
-//ButterKnife
+    //ButterKnife
     implementation 'com.jakewharton:butterknife:8.7.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.7.0'
+
+    //Picasso
+    implementation 'com.squareup.picasso:picasso:2.71828'
 
 }

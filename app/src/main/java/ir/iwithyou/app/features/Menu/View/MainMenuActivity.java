@@ -27,6 +27,7 @@ import butterknife.OnClick;
 import ir.iwithyou.app.BuildConfig;
 import ir.iwithyou.app.MainActivity;
 import ir.iwithyou.app.R;
+import ir.iwithyou.app.features.test.TestActivity;
 
 public class MainMenuActivity extends AppCompatActivity {
 
@@ -49,6 +50,18 @@ public class MainMenuActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+
+
+        if (resultCode == RESULT_OK) {
+            if (requestCode == REQUEST_TAKE_PHOTO){
+                Intent intent = new Intent(this, TestActivity.class);
+                intent.setData(mMediaUri);
+                startActivity(intent);
+            }
+        } else if (requestCode != RESULT_CANCELED) {
+            Toast.makeText(this, "Sorry,there was an error!", Toast.LENGTH_SHORT).show();
+        }
+
 
     }
 
