@@ -2,15 +2,23 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="ir.iwithyou.app">
 
-<!--    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+<!--    <uses-feature
+        android:name="android.hardware.camera2"
+        android:required="true" />-->
+    <uses-feature
+        android:name="android.hardware.camera.any"
+        android:required="true" />
+   <!-- <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />-->
+
+   <!-- <uses-permission android:name="android.permission.CAMERA" />-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.CAMERA" />-->
+
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
-    <uses-feature
-        android:name="android.hardware.camera2"
-        android:required="true" />
 
     <application
         android:allowBackup="true"
@@ -19,9 +27,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".features.TakeSendPhoto.View.TakePhotoActivity">
+        <activity android:name=".features.test.TestActivity">
+
 
         </activity>
+        <activity android:name=".features.TakeSendPhoto.View.TakePhotoActivity" />
         <activity android:name=".features.Menu.View.MainMenuActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -35,10 +45,20 @@
         <activity android:name=".features.introSlider.WelcomeActivity" />
         <activity
             android:name=".features.splash.SplashActivity"
-            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity android:name=".features.login.View.LoginActivity" />
         <activity android:name=".features.register.View.RegisterActivity" />
         <activity android:name=".MainActivity" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"/>
+        </provider>
     </application>
 
 </manifest>
