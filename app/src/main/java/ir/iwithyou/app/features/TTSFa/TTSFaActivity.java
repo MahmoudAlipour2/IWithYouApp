@@ -35,12 +35,7 @@ public class TTSFaActivity extends AppCompatActivity {
         et_TTSFa = findViewById(R.id.et_TTSFa);
 
 
-        btn_TTSFa.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                speakPersian();
-            }
-        });
+        btn_TTSFa.setOnClickListener(v -> speakPersian());
 
 
     }
@@ -54,7 +49,7 @@ public class TTSFaActivity extends AppCompatActivity {
             if (!internetIsConnected()) {
                 Toast.makeText(this, "You must be online for persian speech!", Toast.LENGTH_SHORT).show();
             } else {
-                String apiKey = "MNX8647ZAZ0DYBL";
+                String apiKey = "R95OC8TFXXAJ5G6";
                 String encodedText = new String();
                 try {
                     encodedText = URLEncoder.encode(persianText, "UTF-8");

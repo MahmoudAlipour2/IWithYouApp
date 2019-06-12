@@ -50,4 +50,8 @@ dependencies {
     //Picasso
     implementation 'com.squareup.picasso:picasso:2.71828'
 
+
+    //Hawk
+    implementation "com.orhanobut:hawk:2.0.1"
+
 }

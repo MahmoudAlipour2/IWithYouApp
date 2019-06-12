@@ -29,5 +29,7 @@ ImageView img;
         Picasso.get().load(imageUri).into(img);
 
 
+
+
     }
 }
