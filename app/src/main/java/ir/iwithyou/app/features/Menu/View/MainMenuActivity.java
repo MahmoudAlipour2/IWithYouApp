@@ -27,6 +27,7 @@ import butterknife.OnClick;
 import ir.iwithyou.app.BuildConfig;
 import ir.iwithyou.app.MainActivity;
 import ir.iwithyou.app.R;
+import ir.iwithyou.app.features.sendtoOCR.view.SendFileToOCRActivity;
 import ir.iwithyou.app.features.test.TestActivity;
 
 public class MainMenuActivity extends AppCompatActivity {
@@ -54,7 +55,7 @@ public class MainMenuActivity extends AppCompatActivity {
 
         if (resultCode == RESULT_OK) {
             if (requestCode == REQUEST_TAKE_PHOTO){
-                Intent intent = new Intent(this, TestActivity.class);
+                Intent intent = new Intent(this, SendFileToOCRActivity.class);
                 intent.setData(mMediaUri);
                 startActivity(intent);
             }

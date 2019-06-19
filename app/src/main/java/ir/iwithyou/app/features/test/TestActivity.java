@@ -24,10 +24,6 @@ ImageView img;
 
         img=findViewById(R.id.img);
 
-        Intent intent =getIntent();
-        Uri imageUri = intent.getData();
-        Picasso.get().load(imageUri).into(img);
-
 
 
 
