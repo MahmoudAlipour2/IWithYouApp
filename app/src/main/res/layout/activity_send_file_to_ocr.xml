@@ -6,11 +6,29 @@
     android:layout_height="match_parent"
     tools:context=".features.sendtoOCR.view.SendFileToOCRActivity">
 
-    <Button
-        android:text="UploadFile"
-        android:id="@+id/btn_Upload"
-        android:layout_width="wrap_content"
+  <TextView
+      android:layout_marginTop="20dp"
+      android:layout_centerHorizontal="true"
+      android:id="@+id/idone"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="be name khodah"/>
+  <ImageView
+      android:layout_below="@+id/idone"
+      android:id="@+id/img_SendtoOCR"
+      android:layout_marginTop="50dp"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_centerHorizontal="true"
+      android:src="@drawable/hblogo"/>
+
+    <TextView
+        android:text="salam"
+        android:id="@+id/txt_SendtoOCR"
+        android:layout_below="@+id/img_SendtoOCR"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true" />
+        android:layout_centerHorizontal="true"
+        android:gravity="center"/>
 
 </RelativeLayout>

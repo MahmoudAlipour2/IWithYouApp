@@ -55,7 +55,9 @@ public class MainMenuActivity extends AppCompatActivity {
 
         if (resultCode == RESULT_OK) {
             if (requestCode == REQUEST_TAKE_PHOTO){
+              //  Intent intent = new Intent(this, SendFileToOCRActivity.class);
                 Intent intent = new Intent(this, SendFileToOCRActivity.class);
+
                 intent.setData(mMediaUri);
                 startActivity(intent);
             }

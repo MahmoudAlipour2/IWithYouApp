@@ -33,8 +33,6 @@ public class TTSFaActivity extends AppCompatActivity {
 
         btn_TTSFa = findViewById(R.id.btn_TTSFa);
         et_TTSFa = findViewById(R.id.et_TTSFa);
-
-
         btn_TTSFa.setOnClickListener(v -> speakPersian());
 
 

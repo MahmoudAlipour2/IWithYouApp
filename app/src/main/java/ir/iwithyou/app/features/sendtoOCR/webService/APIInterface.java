@@ -11,6 +11,6 @@ import retrofit2.http.Part;
 
 public interface APIInterface {
     @Multipart
-    @POST("transform/")
+    @POST("transform")
     Call<Response> upload(@Part MultipartBody.Part body, @Header("Authorization") String authToken);
 }
